@@ -1,7 +1,13 @@
+# type 1
 import sys
-# sys.stdout.write("Hello World")
+
 
 def atd_command(text):
-    sys.stdout.write(text + '\n')
+    sys.stdout.write(text + " ")
 
-atd_command("mother fucker")
+def custom_print(value):
+    if isinstance(value, (int, float)):
+        return str(value)
+        return value
+
+atd_command()
