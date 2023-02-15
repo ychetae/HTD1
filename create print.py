@@ -10,4 +10,6 @@ def custom_print(value):
         return str(value)
         return value
 
-atd_command()
+f = 8 + 45
+
+atd_command(str(f) + "Bath")
