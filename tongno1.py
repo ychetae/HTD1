@@ -1,18 +1,17 @@
 def get_input():
     numbers = []
-    count = 0
-    while count < 5:
-        try:
-            num = float(input("Enter a real number: "))
-            numbers.append(num)
-            count += 1
-        except ValueError:
-            print("Invalid input. Please enter a real number.")
+    while True:
+        input_str = input("กรอกตัวเลขจำนวนจริงจำนวน 5 ตัวเลข : ")
+        input_list = input_str.split()
+        if len(input_list) == 5:
+            try:
+                numbers = [float(num) for num in input_list]
+                break
+            except ValueError:
+                print("กรุณากรอกตัวเลขจำนวนจริง!")
+        else:
+            print("กรุณาเว้นวรรคระว่างตัวเลข")
     return numbers
 
 numbers = get_input()
-if len(numbers) == 5:
-    # Do something with the numbers here
-    print("The numbers are:", numbers)
-else:
-    print("Number of inputs is less than 5.")
+print("The numbers are:", numbers)
